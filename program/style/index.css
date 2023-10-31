@@ -416,3 +416,59 @@ h2 {
     background-color: #555;
 }
 
+.valid {
+    border: 2px solid green;
+}
+.invalid {
+    border: 2px solid red;
+}
+
+.invalid-tooltip {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+}
+.success-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.success-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.success-animation {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: green;
+    margin: 0 auto 20px auto;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+

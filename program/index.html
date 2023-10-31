@@ -138,12 +138,27 @@
             </select>
             
             <input id="nameInput" class="validatable-input" type="text" placeholder="Name">
-            <input id="surnameInput" class="validatable-input" type="text" placeholder="Surname">
-            <input id="emailInput" class="validatable-input" type="text" placeholder="Email">
-            <button id="submitButton" type="button" onclick="submitForm()">Submit</button>
+            <div id="nameTooltip" class="invalid-tooltip">Invalid name</div>
 
+            <input id="surnameInput" class="validatable-input" type="text" placeholder="Surname">
+            <div id="surnameTooltip" class="invalid-tooltip">Invalid surname</div>
+
+            <input id="emailInput" class="validatable-input" type="text" placeholder="Email">
+            <div id="emailTooltip" class="invalid-tooltip">Invalid email</div>
+            <p>Thank you for choosing us. we will call you back and schedule a time!</p>
+
+            <button id="submitButton" type="button">Submit</button>
+            <div id="submitTooltip" class="invalid-tooltip">Please correct the form before submitting.</div>
         </div>
     </div>
+    <div class="success-modal" id="successModal">
+        <div class="success-content">
+            <div class="success-animation"></div>
+            <h2>Success!</h2>
+            <p>Your booking has been submitted.</p>
+        </div>
+    </div>
+    
     
 
     <script src="script/index.js"></script>
