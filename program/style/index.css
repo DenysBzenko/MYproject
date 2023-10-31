@@ -471,4 +471,15 @@ h2 {
         transform: scale(0.9);
     }
 }
+#dogImagesContainer {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
 
+.dog-image-gallery {
+    width: 300px; 
+    height: 200px; 
+    object-fit: cover;
+    margin-right: 10px; 
+}
