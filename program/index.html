@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    
+
+
+
     <title>Pawsome</title>
 </head>
 <body>
@@ -59,13 +64,89 @@
     </header>
    <div class="professional">
     <img src="style/photo/men.jpg" alt="Description" class="man-img">
-    <div class="text-content">
-        <h1>Professional Styling for Your Pet</h1>
-        <p>Transform your pet's look with our professional grooming and styling services.</p>
-        <button class="book-now-main">Schedule Appointment</button>
+        <div class="text-content">
+            <h1>Professional Styling for Your Pet</h1>
+            <p>Transform your pet's look with our professional grooming and styling services.</p>
+            <button class="book-now-main">Schedule Appointment</button>
+        </div>
     </div>
-</div>
+    <header class="expect-care">
+        <div class="text-content"> 
+            <h2>Luxurious Spa Treatments for Your Pet </h2>
+            <p>Indulge your pet with our luxurious spa treatments including baths, haircuts, and styling.</p>
+            <button class="book-now-main">Book now</button>
+        </div>
+        <img src="style/photo/el5ppe09gccgbg7f9rjk.jpg" alt="haircuts" class="haircuts">
+    </header>
+    <div class="review-container">
+        <div class="left-section">
+            <div class="review-title">Happy Customers, Happy Pets</div>
+            <div class="review-text">Read what our happy customers have to say about our grooming services.</div>
+            <div class="stars">★★★★★</div>
+            <div>Review from TrustPilot</div>
+        </div>
+        <div class="right-section">
+            <div class="review-content">
+                <img src="style/photo/sog.jpg" alt="Dog" class="dog-image">
+                <div>
+                    <div class="spa-name">Pawsome Spa</div>
+                    <div>My dog always comes back happy and smelling great after a visit to Pawsome Spa.</div>
+                    <div>★★★★★</div>
+                    <div>Jane Doe</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="faq-section">
+        <h1>FAQ Section</h1>
+        <p>We strive to provide the best care and grooming services for your beloved pets. Contact us today to book an appointment.</p>
+        <a href="#" class="schedule-btn">Schedule an Appointment</a>
+        <ul class="faq-list">
+            <li>
+                <span>What services do you offer?</span> 
+                <span>+</span>
+                <div class="faq-answer">The services we offer include...</div>
+            </li>
+            <li>
+                <span>How often should I groom my pet?</span> 
+                <span>+</span>
+                <div class="faq-answer">You should groom your pet every...</div>
+            </li>
+            <li>
+                <span>Can I stay with my pet during the grooming session?</span> 
+                <span>+</span>
+                <div class="faq-answer">Yes, you can stay with your pet...</div>
+            </li>
+            <li>
+                <span>Do you offer mobile grooming services?</span> 
+                <span>+</span>
+                <div class="faq-answer">Yes, we offer mobile grooming services...</div>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Book Now</h2>
+            
+            <label for="services">Choose a service:</label>
+            <select name="services" id="serviceSelection">
+                <option value="spa">Relaxing Spa Treatment</option>
+                <option value="grooming">Professional Grooming</option>
+                <option value="styling">Professional Styling</option>
+            </select>
+            
+            <input id="nameInput" class="validatable-input" type="text" placeholder="Name">
+            <input id="surnameInput" class="validatable-input" type="text" placeholder="Surname">
+            <input id="emailInput" class="validatable-input" type="text" placeholder="Email">
+            <button id="submitButton" type="button" onclick="submitForm()">Submit</button>
 
+        </div>
+    </div>
+    
+
+    <script src="script/index.js"></script>
 
 </body>
 </html>
