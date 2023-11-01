@@ -12,6 +12,7 @@ nav {
     padding: 20px 50px;
     background-color: #b7ceeb;
     border-bottom: 1px solid #E5E5E5;
+    
 }
 
 .logo {
@@ -483,7 +484,7 @@ h2 {
     object-fit: cover;
     margin-right: 10px; 
 }
-.img-container {
+.maps {
     align-self: center; 
     margin: 10px;
 }

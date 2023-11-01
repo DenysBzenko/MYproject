@@ -25,6 +25,8 @@ $(document).ready(function() {
     });
 
     $('.book-now-top, .book-now-main').on('click', function() {
+        let email = $('header input[type="email"]').val();  // Get email from the main input
+        $('#emailInput').val(email);  // Set that email in the modal input
         openModal();
     });
 
@@ -112,4 +114,23 @@ function loadNewDog() {
         $('#contactSection').hide();
         $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section').show();
     });
+    var servicesModal = document.getElementById('servicesModal');
+    var servicesLink = document.querySelector('ul.menu li a[href="#"]');
+    var closeServicesModal = document.getElementById('closeServicesModal'); 
+
+    servicesLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        servicesModal.style.display = 'block';
+    });
+
+    closeServicesModal.addEventListener('click', function() {
+        servicesModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target == servicesModal) {
+            servicesModal.style.display = 'none';
+        }
+    });
+
     
