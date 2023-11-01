@@ -114,23 +114,17 @@ function loadNewDog() {
         $('#contactSection').hide();
         $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section').show();
     });
-    var servicesModal = document.getElementById('servicesModal');
-    var servicesLink = document.querySelector('ul.menu li a[href="#"]');
-    var closeServicesModal = document.getElementById('closeServicesModal'); 
 
-    servicesLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        servicesModal.style.display = 'block';
+    $("ul.menu li a:contains('Service')").on('click', function(e) {
+
+        e.preventDefault();
+        $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section, #dogGallery').hide();
+        $('#service').show();
     });
 
-    closeServicesModal.addEventListener('click', function() {
-        servicesModal.style.display = 'none';
+    $('#backFromservice').on('click', function() {
+        $('#service').hide();
+        $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section').show();
     });
-
-    window.addEventListener('click', function(event) {
-        if (event.target == servicesModal) {
-            servicesModal.style.display = 'none';
-        }
-    });
-
+   
     

@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-    
-
-
-
     <title>Pawsome</title>
 </head>
 <body>
@@ -17,7 +13,7 @@
         <span class="logo">Pawsome</span>
         <ul class="menu">
             <li><a href="#">Home</a></li>
-            <li><a href="#" id="servicesLink">Services</a></li>
+            <li><a href="#" onclick="openServiceDiv()" >Services</a></li>
             <li><a href="#">Gallery</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -100,7 +96,7 @@
     <div class="faq-section">
         <h1>FAQ Section</h1>
         <p>We strive to provide the best care and grooming services for your beloved pets. Contact us today to book an appointment.</p>
-        <a href="#" class="schedule-btn">Schedule an Appointment</a>
+        <a href="#" class="book-now-main">Schedule an Appointment</a>
         <ul class="faq-list">
             <li>
                 <span>What services do you offer?</span> 
@@ -181,29 +177,20 @@
             </div>
         </div>        
     </div>
-    <!-- Service Information Modal -->
-<div id="servicesModal" class="modal">>
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Our Services</h2>
-        <p>We offer a variety of grooming and spa services to keep your pet looking and feeling their best. From basic grooming to luxurious spa treatments, our team of professionals is here to pamper your beloved companion.</p>
-        
-        <h3>Spa Treatment</h3>
-        <p>Indulge your pet with our luxurious spa treatments including baths, massages, and facials.</p>
-
-        <h3>Professional Grooming</h3>
-        <p>Regular grooming can prevent problems such as excessive shedding, skin and paw disorders, painful mats, and bad odor, as well as help you catch other problems that might go unnoticed.</p>
-
-        <h3>Styling Services</h3>
-        <p>Transform your pet's look with our professional grooming and styling services. Whether you want a breed-specific cut or a unique style, our stylists can create the perfect look for your pet.</p>
-        
-        <button id="closeServiceInfo" type="button">Close</button>
+    <div id="service" style="display: none;">
+        <button id="backFromservice">Home</button>
+        <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+            <div style="flex: 1; margin-right: 20px;">
+                <h2>Our Services</h2>
+                <h3>Relaxing Spa Treatment: </h3>
+                <p>We invite your pet for a relaxing grooming in our salon! Our professional groomers use the best grooming products to make your dog look clean and tidy. With gentle strokes, we will ensure your furry friend's comfort and relaxation during the procedure. Feel calm knowing that your pet is receiving the best care in our salon. Let every procedure turn into a real holiday for your four-legged friend!</p>
+                <h3>Professional Grooming: </h3>
+                <p>Contact our professional grooming salon, where we offer high-quality care for your four-legged friend. Our professional groomers have extensive experience working with different breeds of dogs and use the latest techniques to achieve the perfect look for your pet. We choose an individual approach to each dog, ensuring its comfort during all procedures. Let your dog always look stylish and neat with our professional grooming!</p>
+                <h3>Professional Styling: </h3>
+                <p>Emphasize your four-legged friend's personality with our professional styling! Our salon employs qualified dog stylists who know how to emphasize the beauty and characteristics of each breed. They always follow the latest trends in the field of dog grooming and styling to ensure that your pet always looks at its best. Whether it's a classic look or a creative transformation, we will do everything to make your dog feel like a real star while walking!</p>
+            </div>
+        </div>        
     </div>
-</div>
-
-    
-    
-    
     
     
     <script src="script/index.js"></script>
