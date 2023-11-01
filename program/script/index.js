@@ -1,130 +1,120 @@
-function validateEmail(email) {
-    var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-    return re.test(String(email).toLowerCase());
-}
-
-function validateName(name) {
-    return name.length >= 2;
-}
-
-function openModal() {
-    $('#bookingModal').show();
-}
-
-function closeModal() {
-    $('#bookingModal').hide();
-    $('#successModal').hide();
-}
-
-
-$(document).ready(function() {
-
-    
-    $('.close').on('click', function() {
-        closeModal();
-    });
-
-    $('.book-now-top, .book-now-main').on('click', function() {
-        let email = $('header input[type="email"]').val();  // Get email from the main input
-        $('#emailInput').val(email);  // Set that email in the modal input
-        openModal();
-    });
-
-    
-    $('#submitButton').on('click', function() {
-        let nameValid = validateName($('#nameInput').val());
-        let surnameValid = validateName($('#surnameInput').val());
-        let emailValid = validateEmail($('#emailInput').val());
-
-        $('#nameTooltip').toggle(!nameValid);
-        $('#surnameTooltip').toggle(!surnameValid);
-        $('#emailTooltip').toggle(!emailValid);
-        $('#submitTooltip').toggle(!(nameValid && surnameValid && emailValid));
-
-        if (nameValid && surnameValid && emailValid) {
-            closeModal();
-            $('#successModal').show();
-
-            
-            setTimeout(function() {
-                $('#successModal').hide();
-            }, 3000);
-        }
-    });
-
-    
-    $("ul.menu li a:contains('Gallery')").on('click', function(e) {
-        e.preventDefault();
-        $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section').hide();
-        $('#dogGallery').show();
-
-       
-        loadNewDog();
-    });
-
-    $('#nextDog').on('click', function() {
-        loadNewDog();
-    });
-
-    $('#prevDog').on('click', function() {
-        let images = $('#dogImagesContainer img');
-        if (images.length > 1) {
-            images.last().remove();
-        }
-    });
-
-    
-    $('#backToMain').on('click', function() {
-        $('#dogGallery').hide();
-        $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section').show();
-    });
-});
-
-function loadNewDog() {
-    fetch('https://dog.ceo/api/breeds/image/random')
+class Validator {
+    static validateEmail(email) {
+      const re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      return re.test(String(email).toLowerCase());
+    }
+  
+    static validateName(name) {
+      return name.length >= 2;
+    }
+  }
+  
+  class Modal {
+    static open(selector) {
+      $(selector).show();
+    }
+  
+    static close(selector) {
+      $(selector).hide();
+    }
+  }
+  
+  class Gallery {
+    static loadNewDog() {
+      fetch('https://dog.ceo/api/breeds/image/random')
         .then(response => response.json())
         .then(data => {
-            let img = $('<img>', {src: data.message, alt: 'Happy Dog', class: 'dog-image-gallery'});
-            $('#dogImagesContainer').append(img);
-
-           
-            $('#dogImagesContainer').scrollLeft($('#dogImagesContainer')[0].scrollWidth);
+          let img = $('<img>', {src: data.message, alt: 'Happy Dog', class: 'dog-image-gallery'});
+          $('#dogImagesContainer').append(img);
+          $('#dogImagesContainer').scrollLeft($('#dogImagesContainer')[0].scrollWidth);
         })
         .catch(error => {
-            console.log('Error fetching dog image:', error);
+          console.error('Error fetching dog image:', error);
         });
-}
-   
+    }
+  }
+  
+  $(document).ready(function() {
+    $('.close').on('click', function() {
+      Modal.close('#bookingModal');
+      Modal.close('#successModal');
+    });
+  
+    $('.book-now-top, .book-now-main').on('click', function() {
+      let email = $('header input[type="email"]').val();  
+      $('#emailInput').val(email);  
+      Modal.open('#bookingModal');
+    });
+  
+    $('#submitButton').on('click', function() {
+      let nameValid = Validator.validateName($('#nameInput').val());
+      let surnameValid = Validator.validateName($('#surnameInput').val());
+      let emailValid = Validator.validateEmail($('#emailInput').val());
+  
+      $('#nameTooltip').toggle(!nameValid);
+      $('#surnameTooltip').toggle(!surnameValid);
+      $('#emailTooltip').toggle(!emailValid);
+      $('#submitTooltip').toggle(!(nameValid && surnameValid && emailValid));
+  
+      if (nameValid && surnameValid && emailValid) {
+        Modal.close('#bookingModal');
+        Modal.open('#successModal');
+        
+        setTimeout(function() {
+          Modal.close('#successModal');
+        }, 3000);
+      }
+    });
+  
+    $("ul.menu li a:contains('Gallery')").on('click', function(e) {
+      e.preventDefault();
+      $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section').hide();
+      $('#dogGallery').show();
+      Gallery.loadNewDog();
+    });
+  
+    $('#nextDog').on('click', function() {
+      Gallery.loadNewDog();
+    });
+  
+    $('#prevDog').on('click', function() {
+      let images = $('#dogImagesContainer img');
+      if (images.length > 1) {
+        images.last().remove();
+      }
+    });
+  
+    $('#backToMain').on('click', function() {
+      $('#dogGallery').hide();
+      $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section').show();
+    });
+  
     $('.faq-list li span:nth-child(2)').on('click', function() {
-        $(this).next('.faq-answer').slideToggle();
-        if ($(this).text() === '+') {
-            $(this).text('-');
-        } else {
-            $(this).text('+');
-        }
+      $(this).next('.faq-answer').slideToggle();
+      $(this).text($(this).text() === '+' ? '-' : '+');
     });
+  
     $("ul.menu li a:contains('Contact')").on('click', function(e) {
-
-        e.preventDefault();
-        $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section, #dogGallery').hide();
-        $('#contactSection').show();
+      e.preventDefault();
+      $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section, #dogGallery').hide();
+      $('#contactSection').show();
     });
-    
+  
     $('#backFromContact').on('click', function() {
-        $('#contactSection').hide();
-        $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section').show();
+      $('#contactSection').hide();
+      $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section').show();
     });
-
+  
     $("ul.menu li a:contains('Service')").on('click', function(e) {
-
-        e.preventDefault();
-        $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section, #dogGallery').hide();
-        $('#service').show();
+      e.preventDefault();
+      $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section, #dogGallery').hide();
+      $('#service').show();
     });
-
+  
     $('#backFromservice').on('click', function() {
-        $('#service').hide();
-        $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section').show();
+      $('#service').hide();
+      $('.container, nav, header, .spa-treatment, .professional, .expect-care, .review-container, .faq-section').show();
     });
-   
-    
+  });
+  
+  export { validateEmail, validateName, loadNewDog };
