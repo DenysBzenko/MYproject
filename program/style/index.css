@@ -478,8 +478,13 @@ h2 {
 }
 
 .dog-image-gallery {
-    width: 300px; 
-    height: 200px; 
+    width: 400px; 
+    height: 400px; 
     object-fit: cover;
     margin-right: 10px; 
 }
+.img-container {
+    align-self: center; 
+    margin: 10px;
+}
+

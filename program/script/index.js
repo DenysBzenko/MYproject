@@ -3,11 +3,9 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
-
 function validateName(name) {
     return name.length >= 2;
 }
-
 
 function openModal() {
     $('#bookingModal').show();
