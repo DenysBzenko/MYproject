@@ -1,40 +1,39 @@
-// Class for validating user inputs
+
 class Validator {
-  // Method to validate an email using a regular expression
+
   static validateEmail(email) {
       const re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
       return re.test(String(email).toLowerCase());
   }
 
-  // Method to validate a name ensuring it has at least 2 characters
+ 
   static validateName(name) {
       return name.length >= 2;
   }
 }
 
-// Class for handling modal (popup) windows
+
 class Modal {
-  // Method to open (show) a modal window
   static open(selector) {
       $(selector).show();
   }
 
-  // Method to close (hide) a modal window
+  
   static close(selector) {
       $(selector).hide();
   }
 }
 
-// Class for managing the gallery, specifically for loading new dog images
+
 class Gallery {
-  // Method to fetch and display a new random dog image from an API
+  
   static loadNewDog() {
       fetch('https://dog.ceo/api/breeds/image/random')
           .then(response => response.json())
           .then(data => {
               let img = $('<img>', {src: data.message, alt: 'Happy Dog', class: 'dog-image-gallery'});
               $('#dogImagesContainer').append(img);
-              // Automatically scroll to the latest image
+              
               $('#dogImagesContainer').scrollLeft($('#dogImagesContainer')[0].scrollWidth);
           })
           .catch(error => {

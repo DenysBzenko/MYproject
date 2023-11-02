@@ -51,7 +51,7 @@ color: var(--button-bg-hover-color);
 }
 
 
-.book-now-top, .book-now-main {
+.book-now-top, .book-now-main , .back {
 background-color: var(--button-bg-color);
 color: var(--button-text-color);
 border: none;
@@ -61,7 +61,7 @@ cursor: pointer;
 transition: background-color 0.2s;
 }
 
-.book-now-top:hover, .book-now-main:hover {
+.book-now-top:hover, .book-now-main:hover, .back {
 background-color: var(--button-bg-hover-color);
 }
 
