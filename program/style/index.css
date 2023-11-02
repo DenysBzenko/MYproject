@@ -1,779 +1,515 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #b7ceeb;
+
+:root {
+    --main-bg-color: #b7ceeb;
+    --main-text-color: #888888;
+    --button-bg-color: #5643FA;
+    --button-bg-hover-color: gray;
+    --button-text-color: white;
+    --border-color: #E5E5E5;
 }
 
+body {
+font-family: 'Arial', sans-serif;
+margin: 0;
+padding: 0;
+background-color: var(--main-bg-color);
+}
+
+
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #b7ceeb;
-    border-bottom: 1px solid #E5E5E5;
-    
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 50px;
+background-color: var(--main-bg-color);
+border-bottom: 1px solid var(--border-color);
+
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 10%;
+font-size: 24px;
+font-weight: bold;
+margin-left: 10%;
 }
 
+
 .menu {
-    list-style-type: none;
-    display: flex;
-    gap: 40px;
-    margin-right: 10%;
+list-style-type: none;
+display: flex;
+gap: 40px;
+margin-right: 10%;
 }
 
 .menu a {
-    text-decoration: none;
-    color: black;
-    transition: color 0.2s;
+text-decoration: none;
+color: black;
+transition: color 0.2s;
 }
 
 .menu a:hover {
-    color: gray;
+color: var(--button-bg-hover-color);
 }
 
+
 .book-now-top, .book-now-main {
-    background-color: #5643FA;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+background-color: var(--button-bg-color);
+color: var(--button-text-color);
+border: none;
+padding: 10px 20px;
+border-radius: 20px;
+cursor: pointer;
+transition: background-color 0.2s;
 }
 
 .book-now-top:hover, .book-now-main:hover {
-    background-color: gray;
+background-color: var(--button-bg-hover-color);
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-left: 10%;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    background-color: #b7ceeb;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+padding-left: 10%;
+padding-top: 50px;
+padding-bottom: 100px;
+background-color: var(--main-bg-color);
 }
 
+
 h1 {
-    font-size: 48px;
-    max-width: 500px;
-    line-height: 1.2;
-    margin-bottom: 30px;
+font-size: 48px;
+max-width: 500px;
+line-height: 1.2;
+margin-bottom: 30px;
 }
 
 p {
-    max-width: 500px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #888888;
+max-width: 500px;
+margin-bottom: 20px;
+font-size: 20px;
+color: var(--main-text-color);
 }
 
 input[type="email"] {
-    padding: 15px;
-    margin-right: 10px;
-    border: 1px solid #E5E5E5;
-    border-radius: 10px;
-    font-size: 16px;
-    width: 250px;
+padding: 15px;
+margin-right: 10px;
+border: 1px solid var(--border-color);
+border-radius: 10px;
+font-size: 16px;
+width: 250px;
 }
 
+
 .hamster-image {
-    position: absolute;
-    right: 3%;
-    top: 15%;
-    max-height: 500px;
-    border-radius: 10px;
+position: absolute;
+right: 3%;
+top: 15%;
+max-height: 500px;
+border-radius: 10px;
 }
+
 
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 50px auto;
-    text-align: center;
+width: 100%;
+max-width: 1200px;
+margin: 50px auto;
+text-align: center;
 }
+
 
 .slogan {
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: white;
-    background-color: #5742f5;
-    padding: 20px 0;
-    border-radius: 15px;
+font-size: 32px;
+margin-bottom: 40px;
+color: var(--button-text-color);
+background-color: #5742f5;
+padding: 20px 0;
+border-radius: 15px;
 }
 
+
 .icons {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
-    align-items: center;
+display: flex;
+justify-content: space-around;
+margin-bottom: 40px;
+align-items: center;
 }
 
 .icon-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 15px;
 }
 
 .icon {
-    height: 60px;
-    width: 60px;
+height: 60px;
+width: 60px;
 }
 
 .icon-description {
-    font-size: 18px;
+font-size: 18px;
 }
 
 .trusted {
-    font-size: 24px;
-    margin-bottom: 20px;
+font-size: 24px;
+margin-bottom: 20px;
 }
 
 .companies {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-    font-size: 20px;
-    font-weight: bold;
+display: flex;
+justify-content: space-around;
+gap: 30px;
+font-size: 20px;
+font-weight: bold;
 }
 .spa-treatment {
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
-    align-items: center; 
-    padding-left: 10%;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    background-color:#b7ceeb;
+display: flex;
+flex-direction: row; 
+justify-content: space-between;
+align-items: center; 
+padding-left: 10%;
+padding-top: 50px;
+padding-bottom: 100px;
+background-color:var(--main-bg-color);
 }
 
 h2 {
-    font-size: 48px;
-    max-width: 500px;
-    line-height: 1.2;
-    margin-bottom: 30px;
+font-size: 48px;
+max-width: 500px;
+line-height: 1.2;
+margin-bottom: 30px;
 }
 
 .spa-treatment p {
-    max-width: 500px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #888888;
+max-width: 500px;
+margin-bottom: 20px;
+font-size: 20px;
+color: var(--main-text-color);
 }
 
 .spa-treatment .text-content { 
-    max-width: 500px;
+max-width: 500px;
 }
 
 .girlp-img {
-    margin-left: auto;
-    max-height: 410px;
-    border-radius: 10px;
+margin-left: auto;
+max-height: 410px;
+border-radius: 10px;
 }
 
 .professional {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 10%;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    background-color:#b7ceeb;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-left: 10%;
+padding-top: 50px;
+padding-bottom: 100px;
+background-color:var(--main-bg-color);
 }
 
 h1 {
-    font-size: 48px;
-    max-width: 500px;
-    line-height: 1.2;
-    margin-bottom: 30px;
+font-size: 48px;
+max-width: 500px;
+line-height: 1.2;
+margin-bottom: 30px;
 }
 
 .professional p {
-    max-width: 500px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #888888;
+max-width: 500px;
+margin-bottom: 20px;
+font-size: 20px;
+color: var(--main-text-color);
 }
 
 .professional .text-content { 
-    max-width: 500px;
-    order: 2; 
+max-width: 500px;
+order: 2; 
 }
 
 .professional .man-img {
-    max-height: 410px;  
-    border-radius: 10px;
-    order: 1;  
+max-height: 410px;  
+border-radius: 10px;
+order: 1;  
 }
 .expect-care {
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between;
-    align-items: center; 
-    padding-left: 10%;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    background-color: #b7ceeb;
+display: flex;
+flex-direction: row; 
+justify-content: space-between;
+align-items: center; 
+padding-left: 10%;
+padding-top: 50px;
+padding-bottom: 100px;
+background-color: var(--main-bg-color);
 }
 
 h2 {
-    font-size: 48px;
-    max-width: 500px;
-    line-height: 1.2;
-    margin-bottom: 30px;
+font-size: 48px;
+max-width: 500px;
+line-height: 1.2;
+margin-bottom: 30px;
 }
 
 .expect-care p {
-    max-width: 500px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #888888;
+max-width: 500px;
+margin-bottom: 20px;
+font-size: 20px;
+color: var(--main-text-color);
 }
 
 .expect-care .haircuts {
-    margin-left: auto;
-    max-height: 410px;
-    border-radius: 10px;
+margin-left: auto;
+max-height: 410px;
+border-radius: 10px;
 }
 .review-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 80%;
+margin: 20px auto;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .left-section {
-    flex: 2;
+flex: 2;
 }
 
 .right-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .review-title {
-    font-size: 24px;
-    font-weight: bold;
+font-size: 24px;
+font-weight: bold;
 }
 
 .review-text {
-    margin-top: 10px;
+margin-top: 10px;
 }
 
 .stars {
-    color: gold;
-    margin-top: 10px;
+color: gold;
+margin-top: 10px;
 }
 
 .review-content {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+display: flex;
+flex-direction: row-reverse;
+align-items: center;
 }
 
 .dog-image {
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
+width: 150px;
+height: 150px;
+margin-right: 20px;
 }
 
 .faq-section {
-    width: 70%;
-    margin: 20px auto;
-    padding: 30px 40px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+width: 70%;
+margin: 20px auto;
+padding: 30px 40px;
+border: 1px solid #e0e0e0;
+border-radius: 10px;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.faq-section h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
+.faq-section 
+h1 {
+font-size: 32px;
+margin-bottom: 20px;
 }
 
 .faq-section p {
-    margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 .schedule-btn {
-    display: inline-block;
-    background-color: #5643FA;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-bottom: 30px;
+display: inline-block;
+background-color: var(--button-bg-color);
+color: #FFFFFF;
+padding: 10px 20px;
+border-radius: 5px;
+text-decoration: none;
+margin-bottom: 30px;
 }
 
 .faq-list {
-    list-style-type: none;
-    padding: 0;
+list-style-type: none;
+padding: 0;
 }
 
 .faq-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 15px 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #e0e0e0;
+padding: 15px 0;
 }
 
 .faq-list span:last-child {
-    color: #5643FA;
-    cursor: pointer;
+color: var(--button-bg-color);
+cursor: pointer;
 }
 .faq-list li span:last-child {
-    display: inline-block;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+display: inline-block;
+transition: transform 0.3s ease;
+cursor: pointer;
 }
 
 .faq-list li.open span:last-child {
-    transform: rotate(180deg);
+transform: rotate(180deg);
 }
 
 .faq-list li div {
-    display: none;
+display: none;
 }
 .faq-answer {
-    display: none;
-    overflow: hidden;
+display: none;
+overflow: hidden;
 }
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.7);
-    z-index: 1000;
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0,0,0,0.7);
+z-index: 1000;
 }
 
 .modal-content {
-    background-color: #f4f4f4;
-    width: 500px;
-    height: 700px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
+background-color: #f4f4f4;
+width: 500px;
+height: 700px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 20px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+border-radius: 10px;
 }
 
 .close-btn {
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    font-size: 24px;
-    background: none;
-    border: none;
+cursor: pointer;
+position: absolute;
+right: 10px;
+top: 5px;
+font-size: 24px;
+background: none;
+border: none;
 }
 
 .modal-content h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+font-size: 24px;
+margin-bottom: 20px;
 }
 
 .modal-content select, .modal-content input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box; /* Додано цей рядок */
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ddd;
+border-radius: 5px;
+font-size: 16px;
+box-sizing: border-box; 
 }
 
 .modal-content button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+background-color: #333;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
 }
 
 .modal-content button:hover {
-    background-color: #555;
+background-color: #555;
 }
 
 .valid {
-    border: 2px solid green;
+border: 2px solid green;
 }
 .invalid {
-    border: 2px solid red;
+border: 2px solid red;
 }
 
 .invalid-tooltip {
-    color: red;
-    font-size: 12px;
-    margin-top: 4px;
-    display: none;
+color: red;
+font-size: 12px;
+margin-top: 4px;
+display: none;
 }
 .success-modal {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+display: none;
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+z-index: 1000;
 }
 
 .success-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: white;
-    text-align: center;
-    border-radius: 10px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+padding: 20px;
+background-color: var(--button-text-color);
+text-align: center;
+border-radius: 10px;
 }
 
 .success-animation {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: green;
-    margin: 0 auto 20px auto;
-    animation: pulse 1.5s infinite;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background-color: green;
+margin: 0 auto 20px auto;
+animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(0.9);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(0.9);
-    }
+0% {
+    transform: scale(0.9);
+}
+50% {
+    transform: scale(1.1);
+}
+100% {
+    transform: scale(0.9);
+}
 }
 #dogImagesContainer {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
+display: flex;
+overflow-x: auto;
+var(--button-text-color)-space: nowrap;
 }
 
 .dog-image-gallery {
-    width: 400px; 
-    height: 400px; 
-    object-fit: cover;
-    margin-right: 10px; 
+width: 400px; 
+height: 400px; 
+object-fit: cover;
+margin-right: 10px; 
 }
 .maps {
-    align-self: center; 
-    margin: 10px;
+align-self: center; 
+margin: 10px;
 }
-
-
-@media only screen and (max-width: 600px) {
-    .icon { font-size: 90%; }
-    .icon { padding: 5px; }
-    .valid { font-size: 90%; }
-    .valid { padding: 5px; }
-    .man-img { font-size: 90%; }
-    .man-img { padding: 5px; }
-    .maps { font-size: 90%; }
-    .maps { padding: 5px; }
-    .left-section { font-size: 90%; }
-    .left-section { padding: 5px; }
-    .expect-care { font-size: 90%; }
-    .expect-care { padding: 5px; }
-    .haircuts { font-size: 90%; }
-    .haircuts { padding: 5px; }
-    .success-modal { font-size: 90%; }
-    .success-modal { padding: 5px; }
-    .trusted { font-size: 90%; }
-    .trusted { padding: 5px; }
-    .menu { font-size: 90%; }
-    .menu { padding: 5px; }
-    .companies { font-size: 90%; }
-    .companies { padding: 5px; }
-    .text-content { font-size: 90%; }
-    .text-content { padding: 5px; }
-    .review-container { font-size: 90%; }
-    .review-container { padding: 5px; }
-    .logo { font-size: 90%; }
-    .logo { padding: 5px; }
-    .faq-section { font-size: 90%; }
-    .faq-section { padding: 5px; }
-    .faq-list { font-size: 90%; }
-    .faq-list { padding: 5px; }
-    .dog-image { font-size: 90%; }
-    .dog-image { padding: 5px; }
-    .review-content { font-size: 90%; }
-    .review-content { padding: 5px; }
-    .modal { font-size: 90%; }
-    .modal { padding: 5px; }
-    .schedule-btn { font-size: 90%; }
-    .schedule-btn { padding: 5px; }
-    .book-now-main { font-size: 90%; }
-    .book-now-main { padding: 5px; }
-    .invalid { font-size: 90%; }
-    .invalid { padding: 5px; }
-    .success-content { font-size: 90%; }
-    .success-content { padding: 5px; }
-    .icons { font-size: 90%; }
-    .icons { padding: 5px; }
-    .girlp-img { font-size: 90%; }
-    .girlp-img { padding: 5px; }
-    .slogan { font-size: 90%; }
-    .slogan { padding: 5px; }
-    .dog-image-gallery { font-size: 90%; }
-    .dog-image-gallery { padding: 5px; }
-    .stars { font-size: 90%; }
-    .stars { padding: 5px; }
-    .review-title { font-size: 90%; }
-    .review-title { padding: 5px; }
-    .review-text { font-size: 90%; }
-    .review-text { padding: 5px; }
-    .spa-treatment { font-size: 90%; }
-    .spa-treatment { padding: 5px; }
-    .hamster-image { font-size: 90%; }
-    .hamster-image { padding: 5px; }
-    .icon-item { font-size: 90%; }
-    .icon-item { padding: 5px; }
-    .container { font-size: 90%; }
-    .container { padding: 5px; }
-    .success-animation { font-size: 90%; }
-    .success-animation { padding: 5px; }
-    .invalid-tooltip { font-size: 90%; }
-    .invalid-tooltip { padding: 5px; }
-    .faq-answer { font-size: 90%; }
-    .faq-answer { padding: 5px; }
-    .close-btn { font-size: 90%; }
-    .close-btn { padding: 5px; }
-    .modal-content { font-size: 90%; }
-    .modal-content { padding: 5px; }
-    .right-section { font-size: 90%; }
-    .right-section { padding: 5px; }
-    .professional { font-size: 90%; }
-    .professional { padding: 5px; }
-    .icon-description { font-size: 90%; }
-    .icon-description { padding: 5px; }
-}
-
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .icon { font-size: 95%; }
-    .icon { padding: 10px; }
-    .valid { font-size: 95%; }
-    .valid { padding: 10px; }
-    .man-img { font-size: 95%; }
-    .man-img { padding: 10px; }
-    .maps { font-size: 95%; }
-    .maps { padding: 10px; }
-    .left-section { font-size: 95%; }
-    .left-section { padding: 10px; }
-    .expect-care { font-size: 95%; }
-    .expect-care { padding: 10px; }
-    .haircuts { font-size: 95%; }
-    .haircuts { padding: 10px; }
-    .success-modal { font-size: 95%; }
-    .success-modal { padding: 10px; }
-    .trusted { font-size: 95%; }
-    .trusted { padding: 10px; }
-    .menu { font-size: 95%; }
-    .menu { padding: 10px; }
-    .companies { font-size: 95%; }
-    .companies { padding: 10px; }
-    .text-content { font-size: 95%; }
-    .text-content { padding: 10px; }
-    .review-container { font-size: 95%; }
-    .review-container { padding: 10px; }
-    .logo { font-size: 95%; }
-    .logo { padding: 10px; }
-    .faq-section { font-size: 95%; }
-    .faq-section { padding: 10px; }
-    .faq-list { font-size: 95%; }
-    .faq-list { padding: 10px; }
-    .dog-image { font-size: 95%; }
-    .dog-image { padding: 10px; }
-    .review-content { font-size: 95%; }
-    .review-content { padding: 10px; }
-    .modal { font-size: 95%; }
-    .modal { padding: 10px; }
-    .schedule-btn { font-size: 95%; }
-    .schedule-btn { padding: 10px; }
-    .book-now-main { font-size: 95%; }
-    .book-now-main { padding: 10px; }
-    .invalid { font-size: 95%; }
-    .invalid { padding: 10px; }
-    .success-content { font-size: 95%; }
-    .success-content { padding: 10px; }
-    .icons { font-size: 95%; }
-    .icons { padding: 10px; }
-    .girlp-img { font-size: 95%; }
-    .girlp-img { padding: 10px; }
-    .slogan { font-size: 95%; }
-    .slogan { padding: 10px; }
-    .dog-image-gallery { font-size: 95%; }
-    .dog-image-gallery { padding: 10px; }
-    .stars { font-size: 95%; }
-    .stars { padding: 10px; }
-    .review-title { font-size: 95%; }
-    .review-title { padding: 10px; }
-    .review-text { font-size: 95%; }
-    .review-text { padding: 10px; }
-    .spa-treatment { font-size: 95%; }
-    .spa-treatment { padding: 10px; }
-    .hamster-image { font-size: 95%; }
-    .hamster-image { padding: 10px; }
-    .icon-item { font-size: 95%; }
-    .icon-item { padding: 10px; }
-    .container { font-size: 95%; }
-    .container { padding: 10px; }
-    .success-animation { font-size: 95%; }
-    .success-animation { padding: 10px; }
-    .invalid-tooltip { font-size: 95%; }
-    .invalid-tooltip { padding: 10px; }
-    .faq-answer { font-size: 95%; }
-    .faq-answer { padding: 10px; }
-    .close-btn { font-size: 95%; }
-    .close-btn { padding: 10px; }
-    .modal-content { font-size: 95%; }
-    .modal-content { padding: 10px; }
-    .right-section { font-size: 95%; }
-    .right-section { padding: 10px; }
-    .professional { font-size: 95%; }
-    .professional { padding: 10px; }
-    .icon-description { font-size: 95%; }
-    .icon-description { padding: 10px; }
-}
-
-@media only screen and (min-width: 1025px) {
-    .icon { font-size: 100%; }
-    .icon { padding: 15px; }
-    .valid { font-size: 100%; }
-    .valid { padding: 15px; }
-    .man-img { font-size: 100%; }
-    .man-img { padding: 15px; }
-    .maps { font-size: 100%; }
-    .maps { padding: 15px; }
-    .left-section { font-size: 100%; }
-    .left-section { padding: 15px; }
-    .expect-care { font-size: 100%; }
-    .expect-care { padding: 15px; }
-    .haircuts { font-size: 100%; }
-    .haircuts { padding: 15px; }
-    .success-modal { font-size: 100%; }
-    .success-modal { padding: 15px; }
-    .trusted { font-size: 100%; }
-    .trusted { padding: 15px; }
-    .menu { font-size: 100%; }
-    .menu { padding: 15px; }
-    .companies { font-size: 100%; }
-    .companies { padding: 15px; }
-    .text-content { font-size: 100%; }
-    .text-content { padding: 15px; }
-    .review-container { font-size: 100%; }
-    .review-container { padding: 15px; }
-    .logo { font-size: 100%; }
-    .logo { padding: 15px; }
-    .faq-section { font-size: 100%; }
-    .faq-section { padding: 15px; }
-    .faq-list { font-size: 100%; }
-    .faq-list { padding: 15px; }
-    .dog-image { font-size: 100%; }
-    .dog-image { padding: 15px; }
-    .review-content { font-size: 100%; }
-    .review-content { padding: 15px; }
-    .modal { font-size: 100%; }
-    .modal { padding: 15px; }
-    .schedule-btn { font-size: 100%; }
-    .schedule-btn { padding: 15px; }
-    .book-now-main { font-size: 100%; }
-    .book-now-main { padding: 15px; }
-    .invalid { font-size: 100%; }
-    .invalid { padding: 15px; }
-    .success-content { font-size: 100%; }
-    .success-content { padding: 15px; }
-    .icons { font-size: 100%; }
-    .icons { padding: 15px; }
-    .girlp-img { font-size: 100%; }
-    .girlp-img { padding: 15px; }
-    .slogan { font-size: 100%; }
-    .slogan { padding: 15px; }
-    .dog-image-gallery { font-size: 100%; }
-    .dog-image-gallery { padding: 15px; }
-    .stars { font-size: 100%; }
-    .stars { padding: 15px; }
-    .review-title { font-size: 100%; }
-    .review-title { padding: 15px; }
-    .review-text { font-size: 100%; }
-    .review-text { padding: 15px; }
-    .spa-treatment { font-size: 100%; }
-    .spa-treatment { padding: 15px; }
-    .hamster-image { font-size: 100%; }
-    .hamster-image { padding: 15px; }
-    .icon-item { font-size: 100%; }
-    .icon-item { padding: 15px; }
-    .container { font-size: 100%; }
-    .container { padding: 15px; }
-    .success-animation { font-size: 100%; }
-    .success-animation { padding: 15px; }
-    .invalid-tooltip { font-size: 100%; }
-    .invalid-tooltip { padding: 15px; }
-    .faq-answer { font-size: 100%; }
-    .faq-answer { padding: 15px; }
-    .close-btn { font-size: 100%; }
-    .close-btn { padding: 15px; }
-    .modal-content { font-size: 100%; }
-    .modal-content { padding: 15px; }
-    .right-section { font-size: 100%; }
-    .right-section { padding: 15px; }
-    .professional { font-size: 100%; }
-    .professional { padding: 15px; }
-    .icon-description { font-size: 100%; }
-    .icon-description { padding: 15px; }
-}
-
-
-
-    /* Ensure images do not overflow their containers on smaller screens */
-    @media only screen and (max-width: 600px) {
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+@media only screen and (max-width: 600px), only screen and (min-width: 601px) and (max-width: 1024px), only screen and (min-width: 1025px) {
+    img {
+        max-width: 100%;
+        height: auto;
     }
-
-    /* Adjustments for tablets */
-    @media only screen and (min-width: 601px) and (max-width: 1024px) {
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    }
-
-    /* High resolution screens, such as desktops */
-    @media only screen and (min-width: 1025px) {
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    }
-    
+}
