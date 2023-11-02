@@ -12,10 +12,10 @@
     <nav>
         <span class="logo">Pawsome</span>
         <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#" onclick="openServiceDiv()" >Services</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service" >Service</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="book-now-top">Book Now</button>
     </nav>
@@ -191,10 +191,23 @@
             </div>
         </div>        
     </div>
-    
-    
     <script src="script/index.js"></script>
-    
+
+<div id="contacts" style="display: none;">
+    <button id="backFromContact">Home</button>
+    <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+        <div style="flex: 1; margin-right: 20px;">
+            <h2>Our Contact</h2>
+            <p><strong>Number phone:</strong> +38 (050) 123-45-67</p>
+            <p><strong>Email:</strong> pawsome@gmail.com</p>
+            <p><strong>Location:</strong>Ukraine, Kyev, 5 Mykhailo Hrushevskoho Street.</p>
+            <img src="style/photo/kot.jpg" style="width: 200px ; height: auto;">
+        </div>
+        <div style="flex: 1;">
+            <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.4644997686437!2d30.532625975662107!3d50.44596822224279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfad233ecb25%3A0xbe4a6a87072f3a75!2z0JLQtdGA0YXQvtCy0L3QsCDQoNCw0LTQsCDQo9C60YDQsNGX0L3QuA!5e0!3m2!1suk!2sua!4v1698795842805!5m2!1suk!2sua" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>        
+</div>
 
 </body>
 </html>
